@@ -1,3 +1,4 @@
+import random
 import time
 
 saved_dicks = open('generated_cocks.txt', 'a', encoding="utf-8")
@@ -20,8 +21,10 @@ time.sleep(5)
 
 i = 0
 while i < 9999999999999999:
-    
+
     i += 1
+    length = random.randint(0, 15)
+
     time.sleep(0.1)
     saved_dicks.write("⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠛⢉⢉⠉⠉⠻⣿⣿⣿⣿⣿⣿\n")
     saved_dicks.write("⣿⣿⣿⣿⣿⣿⣿⠟⠠⡰⣕⣗⣷⣧⣀⣅⠘⣿⣿⣿⣿⣿\n")
@@ -36,6 +39,9 @@ while i < 9999999999999999:
     saved_dicks.write("⣿⣿⠄⢨⣫⣿⣿⡿⣿⣻⢎⡗⡕⡅⢸⣿⣿⣿⣿⣿⣿⣿\n")
     saved_dicks.write("⣿⣿⠄⢜⢾⣾⣿⣿⣟⣗⢯⡪⡳⡀⢸⣿⣿⣿⣿⣿⣿⣿\n")
     saved_dicks.write("⣿⣿⠄⢸⢽⣿⣷⣿⣻⡮⡧⡳⡱⡁⢸⣿⣿⣿⣿⣿⣿⣿\n")
+    for len in range(length):
+      saved_dicks.write("⣿⣿⠄⢨⣫⣿⣿⡿⣿⣻⢎⡗⡕⡅⢸⣿⣿⣿⣿⣿⣿⣿\n")
+      saved_dicks.write("⣿⣿⠄⢜⢾⣾⣿⣿⣟⣗⢯⡪⡳⡀⢸⣿⣿⣿⣿⣿⣿⣿\n")
     saved_dicks.write("⣿⣿⡄⢨⣻⣽⣿⣟⣿⣞⣗⡽⡸⡐⢸⣿⣿⣿⣿⣿⣿⣿\n")
     saved_dicks.write("⣿⣿⡇⢀⢗⣿⣿⣿⣿⡿⣞⡵⡣⣊⢸⣿⣿⣿⣿⣿⣿⣿\n")
     saved_dicks.write("⣿⣿⣿⡀⡣⣗⣿⣿⣿⣿⣯⡯⡺⣼⠎⣿⣿⣿⣿⣿⣿⣿\n")
@@ -49,4 +55,5 @@ while i < 9999999999999999:
     saved_dicks.write("\n")
     time.sleep(0.1)
     saved_dicks.close
+    print('length: ', length)
     print('cocks generated: ', i)
